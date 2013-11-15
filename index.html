@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Marielly e Tiago</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+</head> 
+<body> 
+
+
+<div data-role="page" id="page1">
+
+	<div data-role="header">
+		<center><label onclick="exibir();"> Não vou falar nada.. </label> </center>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<center> <img id="galeria">
+		<p><i><b>Todos os direitos reservados aos autores das mensagens: <br>Tiago Dias e Marielly Pereira </i></b></p>	
+		<a href="#" data-transition="flip" rel="external"  data-role="button" data-theme="b" data-icon="star" data-inline="true" onclick="amor();">Clique para sortear a mensagem</a>
+		
+		<div id="mensagem">
+		
+		</div>
+	
+	
+	</div> <!-- /content -->
+	
+</div><!-- /page -->
+
+<script>
+
+function amor(){
+	
+	frases = new Array ("Ta bom eu vou comprar o chocolate mais<br>você vai derreter ele pra por no bolo lalala..", "Você é maravilhoso sabia meu principe", "Oh meu Deus Ti Amu", "Dorme com Deus Ti Amu", "Ahh mor para de atiça vai hum to morrendo de saudade", "Todos esses dias eu tava meio assim<br>por estar muito igual a dara, fala gamadona<br>é mor agora você vai ter que me aturar por muitos anos hunn",
+	"Ti adoro meu amor brigada por tudo,<br>sua voz me acalmou hoje conversando com você pelo cel.<br>Eu tava chorando, chorando de nervosa de canseira de tudo<br>e eu queria você aqui comigo você me acalmou pelo cel brigada meu amor",
+	"Eu não me imagino mais sem você<br> eu não me vejo sem os teus abraços e beijos,<br> quero você só você, quero que a gente tenha um futuro maravilhoso mor", "Em relação a fazer algo que te magoa, <br>pode ter certeza que nunca vou fazer mor",
+	"Acontece que foi você quem trouxe a felicidade <br>e os sorrisos verdadeiros de volta pra mim","Você é um presente maravilhoso que ganhei de Deus ti adoro mor","... Ti Amu sabia", "Moor se precisar de mim estou aqui ao seu lado meu anjo",
+	"kkk cabritinhas é vou te chamar de minha cabrita hahaha", "Boa noite mor dorme com Deus --TiiaMu--","Moor pros meus dias serem ainda melhores <br>falta só seus beijos em cada manhã que nasce ;)", "Ps: Ti Amuuuu <br> Ps: Muitoooo", "Moor acabei dormindo rsrs, <br>vou subir pra cama éé mor já são quase 2 meses :)", 
+	"Tbm TI AMU MT <br>Tenha uma ótima noite de trabalho moor", "Hoje foi ótimo estar com você aqui e no shopping s2,<br>e conversar com você no carro :).. Durma com Deus amor", "Saudade loka, muito loka de você",
+	"Saudade de você princesa :´( ", "Boa noite mor dorme com Deus sonha comigo viuu", "Boooom dia Boooom dia <br>Acoooorda durminhocaa", "Quero ouvir sua voz huuuun", "kkkk.. Euuuuuuuuu duvidooo que você aguenta uma dessaaaa..",
+	"Vamos nos beijar para sempre mooor, <br>Se ficarmos velhinhos é só usar corega hahaaa");
+
+	cores = new Array ("blue", "red", "gray", "black", "green", "brown","navy", "pink", "blue", "blue", "red", "red");
+	randCor = Math.floor(Math.random()*12)+0;
+	
+	random = Math.floor(Math.random()*26)+0;
+	
+		$("#mensagem").html("");
+		$("#mensagem").html("<i><b><br><br> <table border='3'> <tr> <td align=center bgcolor=white > <font color='"+ cores[randCor] +"'>" + frases[random]) +"</font>  </td> </tr> </table> </b> </i>";
+	}
+	
+	function exibir() {
+	//Informamos o ID da tag IMG que irá exibir a galeria
+	var imagem = document.getElementById("galeria");
+
+	//Informamos as imagens a serem exibidas pela galeria
+	random = Math.floor(Math.random()*4)+1;
+	
+	imagem.src = "img/"+random+".PNG";
+
+	}
+
+	
+</script>
+
+
+</body>
+</html>
