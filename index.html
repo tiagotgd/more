@@ -20,7 +20,7 @@
 	<div data-role="content">	
 		<center> <img id="galeria">
 		<p><i><b>Todos os direitos reservados aos autores das mensagens: <br>Tiago Dias e Marielly Pereira </i></b></p>	
-		<a href="#" data-transition="flip" rel="external"  data-role="button" data-theme="b" data-icon="star" data-inline="true" onclick="amor();">Clique para sortear a mensagem</a>
+		<a href="#" data-transition="flip" rel="external"  data-role="button" data-theme="b" data-icon="star" data-mini="true" data-inline="true" onclick="amor();">Clique para sortear a mensagem</a>
 		
 		<div id="mensagem">
 		
@@ -60,7 +60,10 @@ function amor(){
 	//Informamos as imagens a serem exibidas pela galeria
 	random = Math.floor(Math.random()*4)+1;
 	
-	imagem.src = "img/"+random+".PNG";
+	if (random == 1)
+		imagem.src = "img/1.PNG";
+	else
+		imagem.src = "img/"+random+".png";
 
 	}
 
